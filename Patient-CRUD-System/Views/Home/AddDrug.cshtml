@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "AddDrug";
+}
+
+<section class="row" aria-labelledby="aspnetTitle">
+    <h1 id="title">ADD NEW RECORD</h1>
+</section>
+
+<hr />
+
+<div class="container mt-5" style="max-width: 400px;">
+    <form>
+        <!-- Drug Field -->
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Drug <span class="text-danger">*</span></label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="Enter drug name" required>
+            </div>
+        </div>
+
+        <!-- Dosage Field -->
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Dosage <span class="text-danger">*</span></label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="Enter dosage" required>
+            </div>
+        </div>
+
+        <!-- Patient Field -->
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Patient <span class="text-danger">*</span></label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="Enter patient name" required>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="row">
+            <div class="col-sm-9 offset-sm-3">
+                <button type="submit" class="btn btn-outline-secondary">Save</button>
+                <button type="reset" class="btn btn-outline-secondary">Clear All</button>
+                <button type="button" class="btn btn-outline-secondary">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

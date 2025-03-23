@@ -1,0 +1,69 @@
+﻿@model Patient_CRUD_System.DTO.MedicationDTO
+
+@{
+    ViewBag.Title = "AddDrug";
+}
+
+<section class="row" aria-labelledby="aspnetTitle">
+    <h1 id="title">@(Model.Id > 0 ? "Update Record" : "Add New Record")</h1>
+</section>
+
+<hr />
+
+<div class="container mt-5" style="max-width: 400px;">
+    <form id="myForm" method="post" action="@Url.Action("AddDrug", "Patient")">
+        @Html.AntiForgeryToken()
+        <!-- Drug Field -->
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Drug <span class="text-danger">*</span></label>
+            <div class="col-sm-9">
+                @*<input type="text" class="form-control" name="Drug" placeholder="Enter drug name" required>*@
+                @Html.TextBoxFor(m => m.Drug, new { @class = "form-control w-100" })
+                @Html.ValidationMessageFor(m => m.Drug, "", new { @class = " text-danger" })
+            </div>
+        </div>
+
+        <!-- Dosage Field -->
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Dosage <span class="text-danger">*</span></label>
+            <div class="col-sm-9">
+                @*<input type="text" class="form-control" name="Dosage" placeholder="Enter dosage" required>*@
+                @Html.TextBoxFor(m => m.Dosage, new { @class = "form-control w-100" })
+                @Html.ValidationMessageFor(m => m.Dosage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- Patient Field -->
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Patient <span class="text-danger">*</span></label>
+            <div class="col-sm-9">
+                @*<input type="text" class="form-control" name="Patient" placeholder="Enter patient name" required>*@
+                @Html.TextBoxFor(m => m.Patient, new { @class = "form-control w-100" })
+                @Html.ValidationMessageFor(m => m.Patient, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="row">
+            <div class="col-sm-9 offset-sm-3">
+                <button type="submit" class="btn btn-outline-secondary" onclick="validateForm()">Save</button>
+                <button onclick="clearForm()" type="reset" class="btn btn-outline-secondary">Clear All</button>
+                <a href="@Url.Action("Index", "Patient", new {area = "Admin"})" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@*<script>
+    function clearForm() {
+        const form = document.getElementById("myForm");
+
+        for (let i = 0; i < form.elements.length; i++) {
+            const field = form.elements[i];
+
+            if (field.type === "text" || field.type === "textarea") {
+                field.value = "";
+            }
+        }
+    }
+</script>*@

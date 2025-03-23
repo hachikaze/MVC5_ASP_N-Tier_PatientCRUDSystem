@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">INDEX</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    </section>
+
+    <div class="d-flex justify-content-end pb-2">
+        <a href="@Url.Action("AddDrug", "Home")" class="btn btn-outline-success fw-bold">ADD MEDS</a>
+    </div>
+
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr class="table-info">
+                <th scope="col">Drug</th>
+                <th scope="col">Dosage</th>
+                <th scope="col">Patient</th>
+                <th scope="col">Date</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Shabu</th>
+                <td>2.8 (Sobrang nakakagising)</td>
+                <td>John Doe Labadan</td>
+                <td>03-19-2025</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</main
