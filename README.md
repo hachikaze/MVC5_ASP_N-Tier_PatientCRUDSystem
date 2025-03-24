@@ -1,7 +1,7 @@
 # Patient CRUD System
 
 ## Overview
-The **Patient CRUD System** is a simple web-based application that allows users to manage patient records, including adding, updating, viewing, and deleting patient medication.
+The **Patient CRUD System** is a simple web-based application that allows users to manage patient records, including adding, updating, viewing, and deleting patient information.
 
 ## Features
 - ➕ **Add Medicaion for Patient**
